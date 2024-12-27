@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.card:hover{
+    box-shadow: 20px 20px 80px -44px #000;
+    transition: .5s ease-in-out;
+}
