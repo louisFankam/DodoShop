@@ -33,10 +33,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             <li class="nav-item">
-              <a class="nav-link active text-decoration-none hover-underline" aria-current="page" href="#!">Accueil</a>
+              <a class="nav-link active text-decoration-none hover-underline" aria-current="page" href="./index.html">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-underline" href="#!">A propos</a>
+              <a class="nav-link hover-underline" href="./pages/propos.html">A propos</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -44,19 +44,26 @@
                 Catégories
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Produits</a>
+                <a class="dropdown-item" href="./pages/produit.html">Produits</a>
                 <a class="dropdown-item" href="#">Femmes</a>
                 <a class="dropdown-item" href="#">Hommes</a>
               </div>
             </li>
           </ul>
-          <form class="d-flex">
+          <div class="d-flex justify-content-between">
+          <form class="d-flex pt-2">
             <a href="pages/panier.html" class="btn btn-outline-dark" type="submit">
                 <i class="bi-cart-fill me-1"></i>
                 Panier
-                <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                <span class="badge bg-dark text-white ms-2 rounded-pill">0</span>
               </a>
           </form>
+          <div class="col-2 d-flex gap-3">
+            <i class="bi bi-person-circle text-secondary fs-3"></i>
+            <P class="pt-2 fw-bold ">Username</P>
+
+          </div>
+        </div>
         </div>
       </div>
     </nav>
@@ -73,8 +80,8 @@
               Reduction jusqu'à <span class="text-success fw-bold">20%</span> sur
               votre première commande !
             </h3>
-            <a href="pages/inscription.html" class="btn btn-danger px-5 fw-bold fs-5">S'inscrire <i
-                class="bi bi-person-circle"></i>
+            <a href="pages/produit.html" class="btn btn-outline-danger px-5 fw-bold fs-5">Consulter <i
+                class="bi bi-list-fill"></i>
             </a>
           </div>
           <div class="col-12 col-lg-6">
@@ -94,7 +101,7 @@
           <div class="row gx-5">
             <div class="col-lg-3 col-12 col-sm-6">
               <div class="card border" style="width: 18rem">
-                <img src="public/image.png" class="card-img-top" alt="..." width="100%" />
+                <img src="./public/image.png" class="card-img-top" alt="..." width="100%" />
                 <div class="card-body">
                   <h5 class="card-title text-center">AIr Force One</h5>
                   <p class="card-text text-center">
@@ -111,7 +118,7 @@
             </div>
             <div class="col-lg-3 col-12 col-sm-6">
               <div class="card" style="width: 18rem">
-                <img src="public/image.png" class="card-img-top" alt="..." />
+                <img src="./public/image.png" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <h5 class="card-title text-center">AIr Force One</h5>
                   <p class="card-text text-center">

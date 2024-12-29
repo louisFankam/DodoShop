@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Inscription - DodoShop</title>
+
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      />
+      <link rel="stylesheet" href="../css/dasboard.css" />
+    </head>
+    <style>
+      /* Limite la hauteur de la table pour activer le scroll */
+      .scrollspy-table {
+        max-height: 300px; /* Ajustez la hauteur selon vos besoins */
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+
+  <body class="d-flex">
+    <!--slidebar-->
+    <div class="slidebar bg-dark py-4">
+      <h2 class="fw-bold text-center text-white">DodoShop</h2>
+      <ul class="list-group list-group-flush mt-5 bg-dark text-white">
+        <li class="list-group-item bg-dark active text-white d-flex align-items-center">
+          <i class="bi bi-house-door me-2"></i> Dashboard
+        </li>
+        <li class="list-group-item bg-dark text-white d-flex align-items-center">
+          <i class="bi bi-box me-2"></i> Produits
+        </li>
+        <li class="list-group-item bg-dark text-white d-flex align-items-center">
+          <i class="bi bi-people me-2"></i> Clients
+        </li>
+        <li class="list-group-item bg-dark text-white d-flex align-items-center">
+          <i class="bi bi-cart me-2"></i> Commandes
+        </li>
+        <li class="list-group-item bg-dark text-white d-flex align-items-center">
+          <i class="bi bi-gear me-2"></i> Paramètres
+        </li>
+      </ul>
+      
+    </div>
+    
+    <!--en_slidebar-->
+
+    <div class="main w-100">
+      <section class="">
+        <div class="row p-2 w-100">
+          <div class="col-10">
+            <input
+              type="email"
+              width=""
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Recherche..."
+            />
+          </div>
+          <div class="col-2 d-flex gap-3">
+            <i class="bi bi-person-circle text-secondary fs-3"></i>
+            <P class="pt-2 fw-bold ">Admin</P>
+
+          </div>
+        </div>
+      </section>
+      <div class="ligne bg-success"></div>
+      <section class="container py-5">
+        <div class="row justify-content-between px-3 py-2">
+          <!--card_itms-->
+          <div class="col-3 bg-light pt-3 rounded d-flex gap-3 shadow-lg">
+            <div
+              class="rounded-circle bg-success d-flex justify-content-center align-items-center"
+              style="width: 50px; height: 50px"
+            >
+              <i class="bi bi-people-fill text-white fs-3"></i>
+            </div>
+            <div>
+              <p class="fw-bold">
+                23,01K <br />
+                <span class="fw-light">Utilisateurs</span>
+              </p>
+            </div>
+          </div>
+          <!--end-card_itms-->
+          <!--card_itms-->
+          <div class="col-3 bg-light pt-3 rounded d-flex gap-3 shadow-lg">
+            <div
+              class="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+              style="width: 50px; height: 50px"
+            >
+              <i class="bi bi-bag-fill text-white fs-4"></i>
+            </div>
+            <div>
+              <p class="fw-bold">
+                12K <br />
+                <span class="fw-light">Produits en stock</span>
+              </p>
+            </div>
+          </div>
+          <!--end-card_itms-->
+          <!--card_itms-->
+          <div class="col-3 bg-light pt-3 rounded d-flex gap-3 shadow-lg">
+            <div
+              class="rounded-circle bg-primary d-flex justify-content-center align-items-center"
+              style="width: 50px; height: 50px"
+            >
+              <i class="bi bi-cart-fill text-white fs-3"></i>
+            </div>
+            <div>
+              <p class="fw-bold">
+                31K <br />
+                <span class="fw-light">Commande Total</span>
+              </p>
+            </div>
+          </div>
+          <!--end-card_itms-->
+        </div>
+        <!-- table -->
+        <div
+          id="scrollspyTable"
+          class="scrollspy-table bg-body-tertiary border mt-5 p-3 rounded-2"
+          data-bs-spy="scroll"
+          data-bs-target="#tableNav"
+          data-bs-smooth-scroll="true"
+          tabindex="0"
+        >
+          <table class="table table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th>#</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Wireless Headphones</td>
+                <td>Electronics</td>
+                <td>$99.99</td>
+                <td>25</td>
+                <td>Available</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Running Shoes</td>
+                <td>Sportswear</td>
+                <td>$59.99</td>
+                <td>50</td>
+                <td>Available</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Smartphone</td>
+                <td>Electronics</td>
+                <td>$499.99</td>
+                <td>10</td>
+                <td>Out of Stock</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+              <!-- Ajout de plus de produits pour tester le scroll -->
+              <tr>
+                <td>4</td>
+                <td>Laptop</td>
+                <td>Electronics</td>
+                <td>$799.99</td>
+                <td>15</td>
+                <td>Available</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Office Chair</td>
+                <td>Furniture</td>
+                <td>$129.99</td>
+                <td>30</td>
+                <td>Available</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Smartwatch</td>
+                <td>Electronics</td>
+                <td>$199.99</td>
+                <td>20</td>
+                <td>Available</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Backpack</td>
+                <td>Accessories</td>
+                <td>$39.99</td>
+                <td>100</td>
+                <td>Available</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Desk Lamp</td>
+                <td>Home</td>
+                <td>$29.99</td>
+                <td>50</td>
+                <td>Available</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Bluetooth Speaker</td>
+                <td>Electronics</td>
+                <td>$59.99</td>
+                <td>40</td>
+                <td>Available</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Gaming Mouse</td>
+                <td>Electronics</td>
+                <td>$49.99</td>
+                <td>60</td>
+                <td>Available</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- en_table -->
+      </section>
+    </div>
+  </body>
+</html>
